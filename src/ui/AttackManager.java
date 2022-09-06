@@ -13,7 +13,9 @@ public class AttackManager {
         createOpponent();
         System.out.println(challenger.getName() + " with " + fiona.getName() + " approaches");
 
-
+        if (fiona.getSpeed() > player.getPoggers().get(0).getSpeed()) {
+            System.out.println("HELLO");
+        }
     }
 
     public void createOpponent() {

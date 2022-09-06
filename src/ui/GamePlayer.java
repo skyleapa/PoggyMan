@@ -97,5 +97,6 @@ public class GamePlayer {
 
     public void attackSequence() {
         System.out.println("Attacking");
+        new AttackManager(player);
     }
 }

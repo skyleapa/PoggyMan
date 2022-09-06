@@ -19,4 +19,8 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    public List<Pog> getPoggers() {
+        return poggers;
+    }
 }
