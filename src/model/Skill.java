@@ -17,7 +17,8 @@ public class Skill {
         pog.setHealth(newHealth);
     }
 
-
-
+    public String getName() {
+        return name;
+    }
 
 }

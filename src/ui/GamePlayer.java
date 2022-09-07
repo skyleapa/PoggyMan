@@ -75,9 +75,9 @@ public class GamePlayer {
     }
 
     public void createPogs() {
-        amogus = new Skill("Amogus", 20, "You've been sussed out");
-        okipullup = new Skill("Pulling Up", 15, "You pulled up at the after party");
-        cornjuice = new Skill("Big Lump With Knobs", 25, "Try it with butter");
+        amogus = new Skill("amogus", 20, "You've been sussed out");
+        okipullup = new Skill("okipullup", 15, "You pulled up at the after party");
+        cornjuice = new Skill("cornjuice", 25, "Try it with butter");
 
         imposter = new Pog("Imposter", 30);
         capybara = new Pog("Capybara", 10);
