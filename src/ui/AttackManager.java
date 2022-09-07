@@ -4,6 +4,7 @@ import model.Player;
 import model.Pog;
 import model.Skill;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class AttackManager {
@@ -20,6 +21,9 @@ public class AttackManager {
 
         if (fiona.getSpeed() > player.getPoggers().get(0).getSpeed()) {
             System.out.println("Fiona is about to attack!");
+
+            Random random = new Random();
+
         } else {
             System.out.println(player.getPoggers().get(0).getName() + " is about to attack! What do you want to do?");
 
