@@ -22,7 +22,14 @@ public class AttackManager {
         if (fiona.getSpeed() > player.getPoggers().get(0).getSpeed()) {
             System.out.println("Fiona is about to attack!");
 
-            Random random = new Random();
+            Random rand = new Random();
+            int randomNum = rand.nextInt(30 + 1);
+            Skill temp = new Skill("Swamp Attack", randomNum, "swampy");
+
+            fiona.addSkill(temp);
+            temp.attack(player.getPoggers().get(0));
+
+            System.out.println(player.getPoggers().get(0).getName() + " has " + player.getPoggers().get(0).getHealth() + " health remaining.");
 
         } else {
             System.out.println(player.getPoggers().get(0).getName() + " is about to attack! What do you want to do?");
@@ -39,14 +46,9 @@ public class AttackManager {
                 if (response == s.getName()) {
                     s.attack(fiona);
                     System.out.println(fiona.getName() + " has " + fiona.getHealth() + " health remaining.");
-                } else {
-                    System.out.println("That doesn't exist");
                 }
             }
         }
-
-
-
     }
 
     public void createOpponent() {
