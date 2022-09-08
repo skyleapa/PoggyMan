@@ -24,6 +24,7 @@ public class AttackManager {
 
             Random rand = new Random();
             int randomNum = rand.nextInt(30 + 1);
+            System.out.println(randomNum);
             Skill temp = new Skill("Swamp Attack", randomNum, "swampy");
 
             fiona.addSkill(temp);
@@ -48,12 +49,14 @@ public class AttackManager {
                     System.out.println(fiona.getName() + " has " + fiona.getHealth() + " health remaining.");
                 }
             }
+
+            System.out.println("out of for loop");
         }
     }
 
     public void createOpponent() {
         challenger = new Player("Shrek");
-        fiona = new Pog("Fiona", 5);
+        fiona = new Pog("Fiona", 100);
 
         challenger.addPog(fiona);
     }
