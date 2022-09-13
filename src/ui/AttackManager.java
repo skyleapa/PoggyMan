@@ -13,7 +13,6 @@ public class AttackManager {
     private Pog fiona;
 
     private Scanner scanner;
-
     public AttackManager(Player player) {
         scanner = new Scanner(System.in);
         createOpponent();
@@ -24,11 +23,12 @@ public class AttackManager {
 
             Random rand = new Random();
             int randomNum = rand.nextInt(30 + 1);
-            System.out.println(randomNum);
+
             Skill temp = new Skill("Swamp Attack", randomNum, "swampy");
 
             fiona.addSkill(temp);
             temp.attack(player.getPoggers().get(0));
+            System.out.println(temp.getName() + " has been used to " + player.getPoggers().get(0).getName());
 
             System.out.println(player.getPoggers().get(0).getName() + " has " + player.getPoggers().get(0).getHealth() + " health remaining.");
 
