@@ -30,6 +30,10 @@ public class GamePlayer {
 
         presentOptions();
         response = scanner.nextLine();
+        actionManager(response);
+    }
+
+    public void actionManager(String response) {
         switch (response) {
             case "1":
                 attackSequence();
@@ -97,7 +101,7 @@ public class GamePlayer {
 
     public void attackSequence() {
         System.out.println("Attacking");
-        new AttackManager(player);
+        new AttackManager(player, this);
         System.out.println("attack sequence done");
     }
 }

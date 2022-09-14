@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 public class AttackManager {
     private Player challenger;
-
     private Pog fiona;
 
     private Scanner scanner;
-    public AttackManager(Player player) {
+    public AttackManager(Player player, GamePlayer gamePlayer) {
         scanner = new Scanner(System.in);
         createOpponent();
         System.out.println(challenger.getName() + " with " + fiona.getName() + " approaches");
+        String response;
 
         if (fiona.getSpeed() > player.getPoggers().get(0).getSpeed()) {
             System.out.println("Fiona is about to attack!");
@@ -42,7 +42,7 @@ public class AttackManager {
 
             System.out.println(skills);
 
-            String response = scanner.nextLine();
+            response = scanner.nextLine();
             for (Skill s : player.getPoggers().get(0).getSkills()) {
                 if (response == s.getName()) {
                     s.attack(fiona);
@@ -50,8 +50,16 @@ public class AttackManager {
                 }
             }
 
-            System.out.println("out of for loop");
         }
+
+        System.out.println("=============================================");
+        System.out.println("What do you want to do?");
+        System.out.println("1. Attack");
+        System.out.println("2. Flee");
+        response = scanner.nextLine();
+
+        gamePlayer.actionManager(response);
+
     }
 
     public void createOpponent() {
