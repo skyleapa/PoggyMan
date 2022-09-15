@@ -101,7 +101,7 @@ public class GamePlayer {
 
     public void attackSequence() {
         System.out.println("Attacking");
-        new AttackManager(player, this);
+        new AttackManager(this, player.getPoggers().get(0));
         System.out.println("attack sequence done");
     }
 }
