@@ -12,6 +12,8 @@ public class AttackManager {
     private Pog fiona;
 
     private Scanner scanner;
+    private boolean whoseFirst;
+
     public AttackManager(GamePlayer gamePlayer, Pog pogger) {
         scanner = new Scanner(System.in);
         createOpponent();
@@ -20,20 +22,30 @@ public class AttackManager {
 
         if (fiona.getSpeed() > pogger.getSpeed()) {
             fionaAttack(pogger);
+            whoseFirst = true;
         } else {
             playerAttack(pogger);
+            whoseFirst = false;
         }
 
-        System.out.println("=============================================");
-        System.out.println("What do you want to do?");
-        System.out.println("1. Attack");
-        System.out.println("2. Flee");
-        response = scanner.nextLine();
+        while(fiona.hasHealth() && pogger.hasHealth()) {
+            if (whoseFirst) {
+                gamePlayer.presentOptions();
+                response = scanner.nextLine();
+                gamePlayer.actionManager(response);
+                playerAttack(pogger);
+                whoseFirst = false;
+            } else {
+                fionaAttack(pogger);
+                whoseFirst = true;
+            }
+        }
+        System.out.println("someone has lost all their health");
 
-        gamePlayer.actionManager(response);
     }
 
     public void fionaAttack(Pog pogger) {
+        System.out.println("========================================");
         System.out.println("Fiona is about to attack!");
 
         Random rand = new Random();
@@ -44,12 +56,13 @@ public class AttackManager {
         fiona.addSkill(temp);
         temp.attack(pogger);
         System.out.println(temp.getName() + " has been used to " + pogger.getName());
-
+        System.out.println(temp.getDescription());
         System.out.println(pogger.getName() + " has " + pogger.getHealth() + " health remaining.");
     }
 
     public void playerAttack(Pog pogger) {
         String response;
+        System.out.println("========================================");
         System.out.println(pogger.getName() + " is about to attack! What skill do you want to use?");
 
         String skills = "";
@@ -64,6 +77,7 @@ public class AttackManager {
             if (response.equals(s.getName())) {
                 s.attack(fiona);
                 System.out.println(s.getName() + " was cast!");
+                System.out.println(s.getDescription());
                 System.out.println(fiona.getName() + " has " + fiona.getHealth() + " health remaining.");
             }
         }

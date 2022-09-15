@@ -16,6 +16,10 @@ public class Pog {
         this.skills = new ArrayList<>();
     }
 
+    public boolean hasHealth() {
+        return health > 0;
+    }
+
     public void addSkill(Skill skill) {
         skills.add(skill);
     }

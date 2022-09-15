@@ -21,4 +21,7 @@ public class Skill {
         return name;
     }
 
+    public String getDescription() {
+        return description;
+    }
 }
