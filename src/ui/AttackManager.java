@@ -38,6 +38,7 @@ public class AttackManager {
             } else {
                 fionaAttack(pogger);
                 whoseFirst = true;
+                System.out.println(fiona.getHealth());
             }
         }
         System.out.println("someone has lost all their health");
