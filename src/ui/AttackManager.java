@@ -18,7 +18,6 @@ public class AttackManager {
         scanner = new Scanner(System.in);
         createOpponent();
         System.out.println(challenger.getName() + " with " + fiona.getName() + " approaches");
-        String response;
 
         if (fiona.getSpeed() > pogger.getSpeed()) {
             fionaAttack(pogger);
@@ -30,15 +29,11 @@ public class AttackManager {
 
         while(fiona.hasHealth() && pogger.hasHealth()) {
             if (whoseFirst) {
-                gamePlayer.presentOptions();
-                response = scanner.nextLine();
-                gamePlayer.actionManager(response);
                 playerAttack(pogger);
                 whoseFirst = false;
             } else {
                 fionaAttack(pogger);
                 whoseFirst = true;
-                System.out.println(fiona.getHealth());
             }
         }
         System.out.println("someone has lost all their health");
