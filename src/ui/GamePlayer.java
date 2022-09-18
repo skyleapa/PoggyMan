@@ -13,6 +13,9 @@ public class GamePlayer {
     private Skill amogus;
     private Skill okipullup;
     private Skill cornjuice;
+    private Skill sus;
+    private Skill citrusfruit;
+    private Skill biglump;
 
     private Pog imposter;
     private Pog capybara;
@@ -83,6 +86,10 @@ public class GamePlayer {
         okipullup = new Skill("okipullup", 15, "You pulled up at the after party");
         cornjuice = new Skill("cornjuice", 25, "Try it with butter");
 
+        sus = new Skill("sus", 21, "sussy");
+        citrusfruit = new Skill("Citrus Attack", 10, "Take a bath in it");
+        biglump = new Skill("Big Lump", 29, "Big lump with knobs");
+
         imposter = new Pog("Imposter", 30);
         capybara = new Pog("Capybara", 10);
         corn = new Pog("Corn", 20);
@@ -90,6 +97,9 @@ public class GamePlayer {
         imposter.addSkill(amogus);
         capybara.addSkill(okipullup);
         corn.addSkill(cornjuice);
+        imposter.addSkill(sus);
+        capybara.addSkill(citrusfruit);
+        corn.addSkill(biglump);
     }
 
     public void presentOptions() {
