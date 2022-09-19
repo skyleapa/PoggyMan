@@ -8,6 +8,8 @@ public class Pog {
     private int health;
     private List<Skill> skills;
     private int speed;
+    private Status pogStatus;
+    private int crit;
 
     public Pog(String name, int speed) {
         this.name = name;
