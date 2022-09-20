@@ -9,13 +9,13 @@ public class Pog {
     private List<Skill> skills;
     private int speed;
     private Status pogStatus;
-    private int crit;
 
     public Pog(String name, int speed) {
         this.name = name;
         this.health = 100;
         this.speed = speed;
         this.skills = new ArrayList<>();
+        this.pogStatus = new Status();
     }
 
     public boolean hasHealth() {
