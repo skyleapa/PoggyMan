@@ -15,43 +15,13 @@ public class Status {
         this.critChance = 1;
     }
 
-    public int getSpeedStatus() {
-        return speedStatus;
-    }
-
-    public void setSpeedStatus(int speedStatus) {
-        this.speedStatus = speedStatus;
-    }
-
-    public int getAttackStatus() {
-        return attackStatus;
-    }
-
-    public void setAttackStatus(int attackStatus) {
-        this.attackStatus = attackStatus;
-    }
-
-    public int getAccuracyStatus() {
-        return accuracyStatus;
-    }
-
-    public void setAccuracyStatus(int accuracyStatus) {
-        this.accuracyStatus = accuracyStatus;
-    }
-
-    public int getDefenseStatus() {
-        return defenseStatus;
-    }
-
-    public void setDefenseStatus(int defenseStatus) {
-        this.defenseStatus = defenseStatus;
+    public void speedBuff() {
+        this.speedStatus = 2;
     }
 
     public int getCritChance() {
         return critChance;
     }
 
-    public void setCritChance(int critChance) {
-        this.critChance = critChance;
-    }
+
 }

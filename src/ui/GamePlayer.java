@@ -86,13 +86,13 @@ public class GamePlayer {
         capybara = new Pog("Capybara", 10);
         corn = new Pog("Corn", 20);
 
-        amogus = new Skill("amogus", 20, "You've been sussed out");
-        okipullup = new Skill("okipullup", 15, "You pulled up at the after party");
-        cornjuice = new Skill("cornjuice", 25, "Try it with butter");
+        amogus = new Skill("amogus", 20);
+        okipullup = new Skill("okipullup", 15);
+        cornjuice = new Skill("cornjuice", 25);
 
-        sus = new Skill("sus", 21, "sussy");
-        citrusfruit = new Skill("Citrus Attack", 10, "Take a bath in it");
-        biglump = new Skill("Big Lump", 29, "Big lump with knobs");
+        sus = new Skill("sus", 21);
+        citrusfruit = new Skill("Citrus Attack", 10);
+        biglump = new Skill("Big Lump", 29);
 
         imposter.addSkill(amogus);
         capybara.addSkill(okipullup);

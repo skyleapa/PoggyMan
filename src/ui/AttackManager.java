@@ -47,12 +47,11 @@ public class AttackManager {
         Random rand = new Random();
         int randomNum = rand.nextInt(30 + 1);
 
-        Skill temp = new Skill("Swamp Attack", randomNum, "swampy");
+        Skill temp = new Skill("Swamp Attack", randomNum);
 
         fiona.addSkill(temp);
         temp.attack(pogger);
         System.out.println(temp.getName() + " has been used to " + pogger.getName());
-        System.out.println(temp.getDescription());
         System.out.println(pogger.getName() + " has " + pogger.getHealth() + " health remaining.");
     }
 
@@ -73,7 +72,6 @@ public class AttackManager {
             if (response.equals(s.getName())) {
                 s.attack(fiona);
                 System.out.println(s.getName() + " was cast!");
-                System.out.println(s.getDescription());
                 System.out.println(fiona.getName() + " has " + fiona.getHealth() + " health remaining.");
             }
         }

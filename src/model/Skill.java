@@ -3,14 +3,14 @@ package model;
 public class Skill {
     private String name;
     private int damage;
-    private String description;
     private int critValue;
+    private Status statusEffect;
 
-    public Skill(String name, int damage, String description) {
+    public Skill(String name, int damage) {
         this.name = name;
         this.damage = damage;
-        this.description = description;
         this.critValue = damage * 2;
+        this.statusEffect = new Status();
     }
 
     public void attack(Pog pog) {
@@ -23,7 +23,4 @@ public class Skill {
         return name;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

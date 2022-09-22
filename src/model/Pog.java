@@ -8,14 +8,12 @@ public class Pog {
     private int health;
     private List<Skill> skills;
     private int speed;
-    private Status pogStatus;
 
     public Pog(String name, int speed) {
         this.name = name;
         this.health = 100;
         this.speed = speed;
         this.skills = new ArrayList<>();
-        this.pogStatus = new Status();
     }
 
     public boolean hasHealth() {
