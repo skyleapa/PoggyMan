@@ -1,11 +1,11 @@
 package model;
 
 public class Status {
-    private int speedStatus;
-    private int attackStatus;
-    private int accuracyStatus;
-    private int defenseStatus;
-    private int critChance;
+    private double speedStatus;
+    private double attackStatus;
+    private double accuracyStatus;
+    private double defenseStatus;
+    private double critChance;
 
     public Status() {
         this.speedStatus = 1;
@@ -16,10 +16,14 @@ public class Status {
     }
 
     public void speedBuff() {
-        this.speedStatus = 2;
+        speedStatus = 2;
     }
 
-    public int getCritChance() {
+    public void speedDeBuff() {
+        speedStatus = 0.5;
+    }
+
+    public double getCritChance() {
         return critChance;
     }
 

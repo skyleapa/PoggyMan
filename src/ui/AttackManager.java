@@ -77,7 +77,6 @@ public class AttackManager {
         }
     }
 
-
     public void createOpponent() {
         challenger = new Player("Shrek");
         fiona = new Pog("Fiona", 15);

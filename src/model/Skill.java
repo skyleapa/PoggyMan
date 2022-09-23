@@ -4,13 +4,15 @@ public class Skill {
     private String name;
     private int damage;
     private int critValue;
-    private Status statusEffect;
 
     public Skill(String name, int damage) {
         this.name = name;
         this.damage = damage;
         this.critValue = damage * 2;
-        this.statusEffect = new Status();
+    }
+
+    public Skill(String name, int damage, void speedBuff) {
+
     }
 
     public void attack(Pog pog) {
