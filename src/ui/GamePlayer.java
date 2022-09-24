@@ -86,7 +86,7 @@ public class GamePlayer {
         capybara = new Pog("Capybara", 10);
         corn = new Pog("Corn", 20);
 
-        amogus = new Skill("amogus", 20, imposter.getStatus().speedBuff());
+        amogus = new Skill("amogus", 20);
         okipullup = new Skill("okipullup", 15);
         cornjuice = new Skill("cornjuice", 25);
 

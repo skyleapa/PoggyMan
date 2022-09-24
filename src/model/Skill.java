@@ -11,10 +11,6 @@ public class Skill {
         this.critValue = damage * 2;
     }
 
-    public Skill(String name, int damage, void speedBuff) {
-
-    }
-
     public void attack(Pog pog) {
         int currentHealth = pog.getHealth();
         int newHealth = currentHealth - damage;

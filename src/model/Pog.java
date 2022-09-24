@@ -1,5 +1,7 @@
 package model;
 
+import status.Status;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,6 @@ public class Pog {
         this.health = 100;
         this.speed = speed;
         this.skills = new ArrayList<>();
-        this.status = new Status();
     }
 
     public boolean hasHealth() {
