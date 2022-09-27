@@ -19,8 +19,15 @@ public class Skill {
     }
 
     public void attack(Pog pog) {
+        int damageDealt = damage;
         int currentHealth = pog.getHealth();
-        int newHealth = currentHealth - damage;
+
+
+        if (new java.util.Random().nextInt(critValue * 100) == 1) {
+            damageDealt = 2 * damage;
+        }
+
+        int newHealth = currentHealth - damageDealt;
         pog.setHealth(newHealth);
     }
 
