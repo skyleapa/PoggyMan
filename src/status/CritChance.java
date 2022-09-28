@@ -3,7 +3,7 @@ package status;
 public class CritChance extends Status {
     public String name;
 
-    public CritChance(int value) {
+    public CritChance(double value) {
         super(value);
         this.name = "critChance";
     }

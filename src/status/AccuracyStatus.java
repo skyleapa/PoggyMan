@@ -3,7 +3,7 @@ package status;
 public class AccuracyStatus extends Status {
     public String name;
 
-    public AccuracyStatus(int value) {
+    public AccuracyStatus(double value) {
         super(value);
         this.name = "accuracyStatus";
     }

@@ -3,6 +3,7 @@ package ui;
 import model.Player;
 import model.Pog;
 import model.Skill;
+import status.*;
 
 import java.util.Scanner;
 
@@ -16,6 +17,12 @@ public class GamePlayer {
     private Skill sus;
     private Skill citrusfruit;
     private Skill biglump;
+
+    private SpeedStatus slowSpeed;
+    private AttackStatus reducedAttack;
+    private CritChance reducedcrit;
+    private DefenseStatus lessDefense;
+    private AccuracyStatus lessAccuracy;
 
     private Pog imposter;
     private Pog capybara;
@@ -94,6 +101,11 @@ public class GamePlayer {
         citrusfruit = new Skill("Citrus Attack", 10);
         biglump = new Skill("Big Lump", 29);
 
+        createStatus();
+
+        sus.addStatus(reducedAttack);
+
+
         imposter.addSkill(amogus);
         capybara.addSkill(okipullup);
         corn.addSkill(cornjuice);
@@ -101,6 +113,15 @@ public class GamePlayer {
         imposter.addSkill(sus);
         capybara.addSkill(citrusfruit);
         corn.addSkill(biglump);
+    }
+
+    public void createStatus() {
+        slowSpeed = new SpeedStatus(0.5);
+        reducedAttack = new AttackStatus(0.5);
+        lessAccuracy = new AccuracyStatus(0.5);
+        lessDefense = new DefenseStatus(0.5);
+        reducedcrit = new CritChance(0.5);
+
     }
 
     public void presentOptions() {

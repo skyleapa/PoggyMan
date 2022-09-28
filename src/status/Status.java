@@ -1,9 +1,9 @@
 package status;
 
 public abstract class Status {
-    private int value;
+    private double value;
 
-    public Status(int value) {
+    public Status(double value) {
         this.value = value;
     }
 

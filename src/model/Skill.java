@@ -27,8 +27,13 @@ public class Skill {
             damageDealt = 2 * damage;
         }
 
+
         int newHealth = currentHealth - damageDealt;
         pog.setHealth(newHealth);
+    }
+
+    public void addStatus(Status status) {
+        this.statuses.add(status);
     }
 
     public String getName() {
