@@ -1,7 +1,5 @@
 package model;
 
-import status.Status;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +8,6 @@ public class Pog {
     private int health;
     private List<Skill> skills;
     private int speed;
-    private Status status;
 
     public Pog(String name, int speed) {
         this.name = name;
@@ -47,7 +44,4 @@ public class Pog {
         return skills;
     }
 
-    public Status getStatus() {
-        return status;
-    }
 }

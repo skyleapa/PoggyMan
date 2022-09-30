@@ -103,8 +103,11 @@ public class GamePlayer {
 
         createStatus();
 
+        amogus.addStatus(lessDefense);
+        okipullup.addStatus(slowSpeed);
         sus.addStatus(reducedAttack);
-
+        citrusfruit.addStatus(lessAccuracy);
+        biglump.addStatus(reducedcrit);
 
         imposter.addSkill(amogus);
         capybara.addSkill(okipullup);

@@ -24,9 +24,9 @@ public class Skill {
 
 
         if (new java.util.Random().nextInt(critValue * 100) == 1) {
+            System.out.println(name + " is a crit!");
             damageDealt = 2 * damage;
         }
-
 
         int newHealth = currentHealth - damageDealt;
         pog.setHealth(newHealth);
