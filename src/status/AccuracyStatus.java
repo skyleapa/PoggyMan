@@ -8,5 +8,7 @@ public class AccuracyStatus extends Status {
         this.name = "accuracyStatus";
     }
 
-
+    public String getName() {
+        return name;
+    }
 }

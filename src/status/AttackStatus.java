@@ -7,4 +7,8 @@ public class AttackStatus extends Status {
         super(value);
         this.name = "attackStatus";
     }
+
+    public String getName() {
+        return name;
+    }
 }

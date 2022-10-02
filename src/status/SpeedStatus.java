@@ -7,4 +7,8 @@ public class SpeedStatus extends Status {
         super(value);
         this.name = "speedStatus";
     }
+
+    public String getName() {
+        return name;
+    }
 }

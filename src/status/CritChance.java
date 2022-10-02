@@ -7,4 +7,8 @@ public class CritChance extends Status {
         super(value);
         this.name = "critChance";
     }
+
+    public String getName() {
+        return name;
+    }
 }

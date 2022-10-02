@@ -22,6 +22,11 @@ public class Skill {
         int damageDealt = damage;
         int currentHealth = pog.getHealth();
 
+        for (Status status : statuses) {
+            if (status.getName() == "attackmanager") {
+
+            }
+        }
 
         if (new java.util.Random().nextInt(critValue * 100) == 1) {
             System.out.println(name + " is a crit!");
