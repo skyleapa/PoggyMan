@@ -19,12 +19,12 @@ public class Skill {
     }
 
     public void attack(Pog pog) {
-        int damageDealt = damage;
-        int currentHealth = pog.getHealth();
+        double damageDealt = damage;
+        double currentHealth = pog.getHealth();
 
         for (Status status : statuses) {
             if (status.getName() == "attackmanager") {
-
+                damageDealt = damageDealt + (damageDealt * status.value);
             }
         }
 
@@ -33,7 +33,7 @@ public class Skill {
             damageDealt = 2 * damage;
         }
 
-        int newHealth = currentHealth - damageDealt;
+        double newHealth = currentHealth - damageDealt;
         pog.setHealth(newHealth);
     }
 

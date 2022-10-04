@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Pog {
     private String name;
-    private int health;
+    private double health;
     private List<Skill> skills;
-    private int speed;
+    private double speed;
 
     public Pog(String name, int speed) {
         this.name = name;
-        this.health = 100;
+        this.health = 100.0;
         this.speed = speed;
         this.skills = new ArrayList<>();
     }
@@ -24,11 +24,11 @@ public class Pog {
         skills.add(skill);
     }
 
-    public void setHealth(int health) {
+    public void setHealth(double health) {
         this.health = health;
     }
 
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 
@@ -36,7 +36,7 @@ public class Pog {
         return name;
     }
 
-    public int getSpeed() {
+    public double getSpeed() {
         return speed;
     }
 

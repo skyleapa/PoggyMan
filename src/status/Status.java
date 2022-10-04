@@ -5,7 +5,7 @@ public abstract class Status {
         return "no name";
     }
 
-    private double value;
+    public double value;
 
     public Status(double value) {
         this.value = value;
