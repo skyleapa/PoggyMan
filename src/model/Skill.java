@@ -26,6 +26,9 @@ public class Skill {
             if (status.getName() == "attackmanager") {
                 damageDealt = damageDealt + (damageDealt * status.value);
             }
+            if (status.getName() == "speedStatus") {
+                pog.setSpeed(status.value);
+            }
         }
 
         if (new java.util.Random().nextInt(critValue * 100) == 1) {

@@ -40,6 +40,10 @@ public class Pog {
         return speed;
     }
 
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
     public List<Skill> getSkills() {
         return skills;
     }
