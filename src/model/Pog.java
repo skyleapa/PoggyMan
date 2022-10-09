@@ -8,12 +8,14 @@ public class Pog {
     private double health;
     private List<Skill> skills;
     private double speed;
+    private double defense;
 
     public Pog(String name, int speed) {
         this.name = name;
         this.health = 100.0;
         this.speed = speed;
         this.skills = new ArrayList<>();
+        this.defense = 0.0;
     }
 
     public boolean hasHealth() {
@@ -48,4 +50,11 @@ public class Pog {
         return skills;
     }
 
+    public double getDefense() {
+        return defense;
+    }
+
+    public void setDefense(double defense) {
+        this.defense = defense;
+    }
 }

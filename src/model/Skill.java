@@ -29,6 +29,9 @@ public class Skill {
             if (status.getName() == "speedStatus") {
                 pog.setSpeed(status.value);
             }
+            if (status.getName() == "defenseStatus") {
+                pog.setDefense(status.value);
+            }
         }
 
         if (new java.util.Random().nextInt(critValue * 100) == 1) {
