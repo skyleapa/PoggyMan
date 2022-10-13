@@ -44,6 +44,7 @@ public class AttackManager {
         System.out.println("========================================");
         System.out.println("Fiona is about to attack!");
 
+        // generate random damage amount
         Random rand = new Random();
         int randomNum = rand.nextInt(30 + 1);
 
