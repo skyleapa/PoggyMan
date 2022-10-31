@@ -14,6 +14,7 @@ public class AttackManager {
     private Scanner scanner;
     private boolean whoseFirst;
 
+
     public AttackManager(GamePlayer gamePlayer, Pog pogger) {
         scanner = new Scanner(System.in);
         createOpponent();
@@ -39,6 +40,7 @@ public class AttackManager {
         System.out.println("someone has lost all their health");
 
     }
+
 
     public void fionaAttack(Pog pogger) {
         System.out.println("========================================");

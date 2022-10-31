@@ -18,6 +18,8 @@ public class Skill {
         this.statuses = new HashSet<>();
     }
 
+    // DONE: speed, attack, crit
+    // TODO: accuracy, defence
     public void attack(Pog pog) {
         double damageDealt = damage;
         double currentHealth = pog.getHealth();
@@ -34,6 +36,9 @@ public class Skill {
             }
             if (status.getName() == "critChance") {
                 critChance = status.value;
+            }
+            if (status.getName() == "accuracyStatus") {
+                // TODO
             }
         }
 

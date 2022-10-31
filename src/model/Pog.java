@@ -50,10 +50,6 @@ public class Pog {
         return skills;
     }
 
-    public double getDefense() {
-        return defense;
-    }
-
     public void setDefense(double defense) {
         this.defense = defense;
     }
